@@ -21,7 +21,7 @@ function register(host, id) {
 register(host, id);
 
 app.get("/", (req, res) => {
-  player.play("./nyanpass.mp3", err => {
+  player.play("./sound.mp3", err => {
     console.error(err);
   });
   res.send({ message: "OK" });
