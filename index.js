@@ -5,6 +5,7 @@ const request = require("request");
 
 const host = process.argv[2];
 const id = process.argv[3];
+const sound = process.argv[4];
 
 function register(host, id) {
   const options = {
@@ -21,7 +22,7 @@ function register(host, id) {
 register(host, id);
 
 app.get("/", (req, res) => {
-  player.play("./sound.mp3", err => {
+  player.play(sound, err => {
     console.error(err);
   });
   res.send({ message: "OK" });
